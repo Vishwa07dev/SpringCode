@@ -3,8 +3,12 @@ package com.upgrad.spring;
 public class App {
 
   public static void main(String[] args) {
-    GreetingService greetingService = new GreetingService();
+
+    GreetingServiceFactory greetingServiceFactory = new GreetingServiceFactory();
+
+    GreetingService greetingService = greetingServiceFactory.getGreetingService("french");
 
     greetingService.greet("Vishwa");
+
   }
 }
